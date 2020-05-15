@@ -9,3 +9,4 @@ Currently, it has support for
  4. colorscheme gruvbox
  I have used vundle as a pluginmanager
  The comments in .vimrc should help you configure your setup to your needs.
+
