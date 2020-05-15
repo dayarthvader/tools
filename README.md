@@ -1,2 +1,5 @@
 # tools
-Compilation of tools such IDE, Build systems, style guides, linters etc ...
+Development evironments - Mostly vim related
+build tools
+tests
+linters etc ...
