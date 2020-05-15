@@ -1,6 +1,6 @@
-layout: page
-title: "VIMRC"
-permalink: /https://dayarthvader.github.io/tools/vimrc/
+layout: page  
+title: "VIMRC"  
+permalink: /https://dayarthvader.github.io/tools/vimrc/  
 This branch contains the .vimrc file I use in my development projects.  
 Currently, it has support for
  1. File explorer
