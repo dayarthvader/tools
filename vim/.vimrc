@@ -42,6 +42,12 @@ Plugin 'ycm-core/YouCompleteMe'
 
 " Gruvbox for pleasant look coloursheme
 Plugin 'morhetz/gruvbox'
+
+" cpplint - linter tool conform to google style-guide - C++ specific
+" configuration
+set rtp+=~/.vim/bundle/vim-cpplint
+Plugin 'funorpain/vim-cpplint'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 " All of your Plugins must be added before the following line ****************
@@ -51,3 +57,14 @@ filetype plugin indent on    " required
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 colorscheme gruvbox
+
+" C++ specific configuration -- You want to tailor this part for your needs
+function! Formatonsave()
+  let l:formatdiff = 1
+  py3f /usr/share/clang/clang-format-3.8/clang-format.py
+endfunction
+
+" Call Formaronsave for every write on a buffer with below exptenions
+autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
+" Call cpplint on buffers on write, enables fixing the issues right away
+autocmd BufWritePost *.h,*.cpp call Cpplint()
