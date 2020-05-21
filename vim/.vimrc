@@ -48,6 +48,10 @@ Plugin 'morhetz/gruvbox'
 set rtp+=~/.vim/bundle/vim-cpplint
 Plugin 'funorpain/vim-cpplint'
 
+" Setup FZF - FZF is loaded with features, I shall eventually do away with
+" NerdTree and ctrlP as FZF does it all
+Plugin 'junegunn/fzf.vim'
+set rtp+=~/.fzf
 call vundle#end()            " required
 filetype plugin indent on    " required
 " All of your Plugins must be added before the following line ****************
